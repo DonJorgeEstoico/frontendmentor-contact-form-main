@@ -1,0 +1,261 @@
+html {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: hsl(148, 38%, 91%);
+}
+
+/*------------------------------FONTS------------------------------*/
+@font-face {
+    font-family: Karla;
+    src: url(../assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+.karla-font,
+h2,
+span,
+b,
+input,
+label,
+textarea,
+button {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #686868;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: hsl(187, 24%, 22%);
+}
+
+span,
+b,
+#label-checkbox,
+#label-checkbox b {
+    font-size: 14px;
+}
+
+b {
+    color: hsl(169, 82%, 27%);
+}
+
+input,
+label {
+    font-size: 1rem;
+}
+
+#message-span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+#message-span,
+#thanks-span {
+    color: #FFFFFF;
+}
+
+/*------------------------------FLEXBOX------------------------------*/
+.flex-column,
+main,
+section,
+article,
+form,
+.input-col-width {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.flex-row,
+.input-center,
+.radio-center {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/*------------------------------AREAS------------------------------*/
+section {
+    gap: 0;
+    align-items: center;
+}
+
+article {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+}
+
+form {
+    width: 35vw;
+    gap: 2rem !important;
+}
+
+.input-center {
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-center,
+.input-col-width {
+    width: 50%;
+}
+
+.input-text {
+    border-style: solid;
+    border-width: thin;
+    cursor: pointer;
+}
+
+.input-text:hover,
+.input-text:focus {
+    border-color: hsl(169, 82%, 27%);
+    outline: hsl(169, 82%, 27%);
+    background-color: hsl(148, 38%, 91%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-box-shadow: 0 0 0px 1000px hsl(148, 38%, 91%) inset !important;
+}
+
+.input-text,
+button,
+textarea {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    border: 0px;
+    margin: 0px;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    accent-color: hsl(169, 82%, 27%);
+}
+
+textarea {
+    cursor: pointer;
+}
+
+#checkbox-width {
+    width: auto;
+}
+
+button {
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: hsl(169, 82%, 27%);
+    border-style: none;
+}
+
+button:hover {
+    background-color: hsl(187, 24%, 22%);
+}
+
+/*------------------------------JS------------------------------*/
+#success-article {
+    position: absolute;
+    width: 21vw;
+    background-color: hsl(187, 24%, 22%);
+    animation: success-anim 5s ease 0s 1 normal forwards;
+}
+
+@keyframes success-anim {
+	0% {
+		opacity: 0;
+        transform: translateY(-10vw);
+	}
+
+    20% {
+        opacity: 1;
+        transform: translateY(-5vw);
+    }
+    
+    80% {
+        opacity: 1;
+        transform: translateY(-5vw);
+    }
+
+	100% {
+		opacity: 0;
+		transform: translateY(-10vw);
+	}
+}
+
+.input-error {
+    border-color: hsl(0, 66%, 54%);
+}
+
+.span-transition {
+    animation: span-anim 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes span-anim {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    margin-top: 5px;
+    color: hsl(0, 66%, 54%);
+}
+
+/*------------------------------MEDIAS------------------------------*/
+@media (max-width: 1220px) {
+    body {
+        margin: 2rem;
+    }
+
+    #success-article,
+    form {
+        width: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .input-row-area {
+        flex-direction: column;
+    }
+
+    .input-center,
+    .input-col-width {
+        width: auto;
+    }
+}

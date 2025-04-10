@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Form Main</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article class="visible" id="success-article">
+                <div class="flex-row">
+                    <img src="assets/images/icon-success-check.svg" alt="icon-success-check">
+                    <span id="message-span">
+                        Message Sent!
+                    </span>
+                </div>
+                <span id="thanks-span">
+                    Thanks for completing the form. We'll be in touch soon!
+                </span>
+            </article>
+            <article>
+                <form id="contact-us-form">
+                    <h2>
+                        Contact Us
+                    </h2>
+                    <div class="flex-row input-row-area">
+                        <div class="input-col-width">
+                            <span>
+                                First Name <b>*</b>
+                            </span>
+                            <input type="text" name="first-name" id="first-name" class="input-text">
+                            <span class="hidden span-transition" id="span-1">
+                                This field is required
+                            </span>
+                        </div>
+                        <div class="input-col-width">
+                            <span>
+                                Last Name <b>*</b>
+                            </span>
+                            <input type="text" name="last-name" id="last-name" class="input-text">
+                            <span class="hidden span-transition" id="span-2">
+                                This field is required
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex-column">
+                        <span>
+                            Email <b>*</b>
+                        </span>
+                        <input type="email" name="email" id="email" class="input-text">
+                        <span class="hidden span-transition" id="span-3">
+                            Please enter a valid email address
+                        </span>
+                    </div>
+                    <div class="flex-column">
+                        <span>
+                            Query Type <b>*</b>
+                        </span>
+                        <div class="flex-row input-row-area">
+                            <div class="input-center input-text">
+                                <input type="radio" name="radio-group" id="general-enquiry" value="1">
+                                <label for="general-enquiry">General Enquiry</label><br>
+                            </div>
+                            <div class="input-center input-text">
+                                <input type="radio" name="radio-group" id="support-request" value="2">
+                                <label for="support-request">Support Request</label><br>
+                            </div>
+                        </div>
+                        <span class="hidden span-transition" id="span-4">
+                            Please select a query type
+                        </span>
+                    </div>
+                    <div class="flex-column">
+                        <span>
+                            Message <b>*</b>
+                        </span>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                        <span class="hidden span-transition" id="span-5">
+                            This field is required
+                        </span>
+                    </div>
+                    <div class="flex-column">
+                        <div class="input-center" id="checkbox-width">
+                            <input type="checkbox" name="checkbox-team" id="checkbox-team" value="3">
+                            <label for="3" id="label-checkbox">I consent to being contacted by the team <b>*</b></label>
+                        </div>
+                        <span class="hidden span-transition" id="span-6">
+                            To submit this form, please consent to being contacted
+                        </span>
+                    </div>
+                    <button type="submit">
+                        Submit
+                    </button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
