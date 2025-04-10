@@ -61,12 +61,45 @@ label {
 #message-span {
     font-size: 1rem;
     font-weight: 700;
-    color: #FFFFFF;
 }
 
+/*------------------------------COMMON-INHERITANCE------------------------------*/
+/*!-COLOR-!*/
+button,
 #message-span,
 #thanks-span {
     color: #FFFFFF;
+}
+
+#success-article,
+button:hover {
+    background-color: hsl(187, 24%, 22%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-box-shadow: 0 0 0px 1000px hsl(148, 38%, 91%) inset !important;
+}
+
+/*!-CURSOR-!*/
+.input-text,
+input[type=radio],
+input[type=checkbox],
+textarea {
+    cursor: pointer;
+}
+
+/*!-WIDTH-!*/
+.input-center,
+.input-col-width {
+    width: 50%;
 }
 
 /*------------------------------FLEXBOX------------------------------*/
@@ -111,15 +144,9 @@ form {
     gap: 1rem;
 }
 
-.input-center,
-.input-col-width {
-    width: 50%;
-}
-
 .input-text {
     border-style: solid;
     border-width: thin;
-    cursor: pointer;
 }
 
 .input-text:hover,
@@ -127,18 +154,6 @@ form {
     border-color: hsl(169, 82%, 27%);
     outline: hsl(169, 82%, 27%);
     background-color: hsl(148, 38%, 91%);
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
--webkit-box-shadow: 0 0 0px 1000px hsl(148, 38%, 91%) inset !important;
 }
 
 .input-text,
@@ -154,12 +169,7 @@ input[type=checkbox] {
     margin: 0px;
     width: 1rem;
     height: 1rem;
-    cursor: pointer;
     accent-color: hsl(169, 82%, 27%);
-}
-
-textarea {
-    cursor: pointer;
 }
 
 #checkbox-width {
@@ -168,20 +178,14 @@ textarea {
 
 button {
     font-size: 1rem;
-    color: #FFFFFF;
     background-color: hsl(169, 82%, 27%);
     border-style: none;
-}
-
-button:hover {
-    background-color: hsl(187, 24%, 22%);
 }
 
 /*------------------------------JS------------------------------*/
 #success-article {
     position: absolute;
     width: 21vw;
-    background-color: hsl(187, 24%, 22%);
     animation: success-anim 5s ease 0s 1 normal forwards;
 }
 
